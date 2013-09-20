@@ -14,5 +14,9 @@ target
 /.settings
 /bin
 
+# Netbeans files #
+/nbproject
+build.xml
+
 # Mac File System
 .DS_Store
