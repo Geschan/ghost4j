@@ -78,6 +78,7 @@ public class SimpleRenderer extends AbstractRemoteRenderer {
 
 	// prepare args
 	String[] gsArgs = { "-dQUIET", "-dNOPAUSE", "-dBATCH", "-dSAFER",
+                "-dUseCropBox", "-dNumRenderingThreads=2", 
 		"-dFirstPage=" + (begin + 1), "-dLastPage=" + (end + 1),
 		"-sDEVICE=display", "-sDisplayHandle=0",
 		"-dDisplayFormat=16#804", "-r" + this.getResolution()};
