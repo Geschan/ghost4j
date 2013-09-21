@@ -17,6 +17,7 @@ target
 # Netbeans files #
 /nbproject
 build.xml
+nbactions*
 
 # Mac File System
 .DS_Store
