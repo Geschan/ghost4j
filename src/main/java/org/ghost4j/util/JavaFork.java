@@ -191,12 +191,17 @@ public class JavaFork implements Runnable {
 	    }
 	}
 
+        String systemCp = System.getProperty("java.class.path");      
+        if(systemCp.length() > 0) {
+                cpBuilder.append(PATH_SEPARATOR);
+                cpBuilder.append(systemCp);
+        }
 	String cp = cpBuilder.toString();
 
 	if (cp.isEmpty() || cp.contains("surefirebooter")) {
 	    // if called from Maven: use the java.class.path property as
 	    // classpath
-	    return System.getProperty("java.class.path");
+	    return systemCp;
 	} else {
 	    return cp;
 	}
